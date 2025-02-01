@@ -1,0 +1,1 @@
+# Define WTForms if needed

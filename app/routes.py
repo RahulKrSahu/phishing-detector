@@ -1,10 +1,11 @@
-from flask import request, jsonify
+from flask import request, jsonify, render_template
+from app import app  
 import joblib
 from app.utils.feature_extractor import extract_features
 import os
 
-MODEL_PATH = os.path.join('app', 'models', 'phishing_detection_model.pkl')
-model = joblib.load(MODEL_PATH)
+# MODEL_PATH = os.path.join('app', 'models', 'phishing_detection_model.pkl')
+# model = joblib.load(MODEL_PATH)
 
 @app.route('/check-url', methods=['POST'])
 def check_url():
@@ -25,4 +26,4 @@ def check_url():
 
 @app.route('/')
 def home():
-    return app.send_static_file('index.html')
+    return render_template('index.html')

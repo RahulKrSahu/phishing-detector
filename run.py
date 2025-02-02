@@ -1,1 +1,1 @@
-# Entry point for the Flask app
+# Entry point to run the app

@@ -1,1 +1,1 @@
-# Initialize Flask app
+# Initializes the Flask app
